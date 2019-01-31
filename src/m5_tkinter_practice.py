@@ -37,7 +37,7 @@ def main():
     # -------------------------------------------------------------------------
     hello_button['command'] = (lambda: print('hello'))
     # -------------------------------------------------------------------------
-    # TODO: 6. After reading and understanding the m4e module,
+    # done: 6. After reading and understanding the m4e module,
     #   -- Put an Entry box on the Frame.
     #   -- Put a second Button on the Frame.
     #   -- Make this new Button, when pressed, print "Hello"
@@ -51,14 +51,7 @@ def main():
     second_button['command'] = (lambda:print_things(entry_box))
     second_button.grid()
 
-    window.mainloop()
 
-def print_things(box):
-    contents_of_entry = box.get()
-    if contents_of_entry == 'ok':
-        print('Hello')
-    else:
-        print('Goodbye')
     # -------------------------------------------------------------------------
     # TODO: 7.
     #    -- Put a second Entry on the Frame.
@@ -87,7 +80,16 @@ def print_things(box):
     # TODO: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
 
+    window.mainloop()
 
+
+
+def print_things(box):
+    contents_of_entry = box.get()
+    if contents_of_entry == 'ok':
+        print('Hello')
+    else:
+        print('Goodbye')
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
