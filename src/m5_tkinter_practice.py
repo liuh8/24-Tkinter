@@ -48,7 +48,7 @@ def main():
     entry_box.grid()
 
     second_button = ttk.Button(frame, text='hello or goodbye?')
-    second_button['command'] = (lambda:print_things(entry_box))
+    second_button['command'] = (lambda: print_things(entry_box))
     second_button.grid()
 
 
@@ -75,7 +75,12 @@ def main():
     #      s = entry_box.get()
     #      n = int(s)
     ####################################################################
+    second_entry = ttk.Entry(frame)
+    second_entry.grid()
 
+    third_button = ttk.Button(frame, text='3rd button')
+    third_button['command'] = (lambda:print_n_times(second_entry))
+    third_button.grid()
     # -------------------------------------------------------------------------
     # TODO: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
@@ -90,6 +95,10 @@ def print_things(box):
         print('Hello')
     else:
         print('Goodbye')
+
+def print_n_times(n):
+    a = n.get
+
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
